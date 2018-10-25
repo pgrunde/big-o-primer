@@ -65,7 +65,7 @@ If I have 6 digits I do 36 multiplications and 10 to 11 adds
 
 For 100 digit numbers it's 10,000 multiplications and 200 adds
 
-This is *O(n2)* or *quadratic* *complexity*
+This is *O(n^2)* or *quadratic* *complexity*
 
 * Significant Portion
 
@@ -76,3 +76,73 @@ As the number grows, the second term becomes insignificant
 Fo one million digits it's one trillion (10^12) multiplications and two million adds. Adds are now a measley 0.0002% of total operations!
 
 When considering your algorithm's relative complexity (Big O), *always* *assume* *the* *worst*
+
+* The Graph
+
+.image slidecontent/big-o-complexity.png
+.link http://bigocheatsheet.com/
+
+* Binary Search - the phone book
+
+Imagine I need to find my name in the phone book. Pretend I can't estimate the location.
+
+Open the phone book in the middle- is the name on the page before or after my name?
+
+If it is before, take the first half of the book and do the same operation. If it is after, do it to the second half of the book. Repeat until you find your name.
+
+* Binary search complexity
+
+For a phone book of 3 names it takes 2 comparisons.
+
+For 7 it takes at most 3.
+
+For 15 it takes 4.
+
+For 1,000,000 it takes 20.
+
+This is *O(log* *n)* or *logarithmic* *complexity*
+
+* It's big, it's heavy, it's wood
+
+Remember that a log is the inverse of exponentation
+
+.image slidecontent/log.gif
+
+* Graph Theory - Traveling Sales
+
+Imagine you are in sales and you must visit clients in a number of towns. You want to compare possible routes between towns to find what works best for you.
+
+“It's a very special situation, because once you have decided that every node will be visited once, every node has exactly one predecessor and every node has one successor. It's what is called a combinatorial optimisation problem,” - Jim Bookbinder, director of the Management of Integrated Manufacturing Systems research, University of Waterloo
+
+* Graph Theory - Factorial
+
+The factorial of 4 (4!), for example, is 4 x 3 x 2 x 1 (24)
+
+5! is 120
+
+6! is 720
+
+25! is 1.551121 x 10^25 different combinations!
+
+This is *O(n!)* or *factorial* or *combinatorial* *complexity*
+
+* Polynomial Time
+
+.image slidecontent/big-o-complexity.png
+.link http://bigocheatsheet.com/
+
+* Non-Polynomial Time
+
+Trapdoor functions are not computed in polynomial time. 
+
+Trapdoor functions are a type of function for which the inverse is incredibly computationally hard to perform.
+
+They are used for public cryptography as part of TLS (Transport Layer Security)
+
+[[https://www.youtube.com/watch?v=YEBfamv-_do][Diffie Hellman is one such example]]
+
+* JavaScript Algorithms with their Complexity
+
+.link https://github.com/trekhleb/javascript-algorithms
+
+Special thanks to [[https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation][this stack overflow post]]
