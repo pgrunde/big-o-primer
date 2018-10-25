@@ -1,0 +1,78 @@
+Big O
+An Algorithm's Relative Complexity
+
+* Computer Science
+
+"Computer Science is the worst thing to happen to both computers and science"
+
+-- Neil Gershenfeld, MIT Professor of Physics and Computer Science
+
+* Complexity
+
+- Space and Time
+
+- How much Space and Time is used when the input of my function grows?
+
+* Our Fond Early Algorithms
+
+Addition of numbers with two digits
+
+.code slidecontent/addition.txt
+
+* Crank up the Inputs
+
+Addition of numbers with more inputs
+
+.code slidecontent/moreaddition.txt
+
+* Number of Operations
+
+The operation is addition
+
+The complexity is the number of operations
+
+For addition, if I have two digits I do 2 additions. If I have 22 digits I do 22 additions.
+
+The number of operations is directly proportional to the size of my input
+
+This is *0(n)* or *linear* *complexity*
+
+* Our Fond Slightly Later Early Algorithms
+
+Multiplication of numbers with two digits
+
+.code slidecontent/multiplication.txt
+
+* Crank up the Inputs
+
+I had to do 4 multiplications with 2 digit numbers
+
+To multiply two 6 digit numbers we must do 36 multiplications
+
+.code slidecontent/moremultiplication.txt
+
+After our multiplication we'll need to do potential 10 or 11 column additions!
+
+* Number of Operations
+
+The operation is multiplication (but we also use addition!)
+
+The complexity is the number of operations
+
+For multiplication if I have 2 digits I do 4 multiplications and 2 adds
+
+If I have 6 digits I do 36 multiplications and 10 to 11 adds
+
+For 100 digit numbers it's 10,000 multiplications and 200 adds
+
+This is *O(n2)* or *quadratic* *complexity*
+
+* Significant Portion
+
+Hey wasn't that n^2 + 2n, not just n^2?
+
+As the number grows, the second term becomes insignificant
+
+Fo one million digits it's one trillion (10^12) multiplications and two million adds. Adds are now a measley 0.0002% of total operations!
+
+When considering your algorithm's relative complexity (Big O), *always* *assume* *the* *worst*
